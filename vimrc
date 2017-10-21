@@ -46,7 +46,17 @@ Plugin 'tpope/vim-fugitive'
 " Define text objects consisting of lines of code at same indent level
 Plugin 'michaeljsmith/vim-indent-object'
 
+" Autocompletion of various programming languages
 Plugin 'Valloric/YouCompleteMe'
+
+" LaTeX support
+Plugin 'lervag/vimtex'
+
+" Vim snippets
+Plugin 'honza/vim-snippets'
+
+" More Vim snippets
+Plugin 'sirver/UltiSnips'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
