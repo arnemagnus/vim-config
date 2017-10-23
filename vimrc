@@ -82,6 +82,7 @@ colorscheme solarized
 
 
 " Add colored column at 80 to avoid writing too far to the right:
+highlight ColorColumn ctermbg=red
 set colorcolumn=80
 " Show line numbering
 set nu
@@ -107,6 +108,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set autoindent
+
 
 " Remove extra whitespace on save:
 autocmd BufWritePre * :%s/\s\+$//e
