@@ -56,7 +56,7 @@ Plugin 'lervag/vimtex'
 Plugin 'honza/vim-snippets'
 
 " More Vim snippets
-Plugin 'sirver/UltiSnips'
+Plugin 'SirVer/UltiSnips'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -86,6 +86,8 @@ set colorcolumn=80
 " Show line numbering
 set nu
 
+" Set relative line numbering
+set relativenumber
 
 " Define leader key:
 let mapleader=";"
@@ -120,6 +122,11 @@ nnoremap <Leader> <Leader> :e#<CR>
 " Show matching parentheses:
 set showmatch
 
+" UltiSnips triggering:
+let g:UltiSnipsExpandTrigger = '<C-j>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+let g:UltiSnipsUsePythonVersion = 3
 " Ensure that arrow keys work as intended:
 map OD <left>
 map OC <right>
