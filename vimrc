@@ -1,3 +1,4 @@
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -76,7 +77,8 @@ filetype plugin indent on    " required
 " Set vim theme to 'dark solarized':
 syntax enable
 "let g:solarized_termcolors=256
-"set t_Co=256
+"let g:solarized_termtrans=1
+let t_Co=256
 set background=dark
 colorscheme solarized
 
@@ -134,3 +136,12 @@ map OD <left>
 map OC <right>
 map OA <up>
 map OB <down>
+
+let g:vimtex_compiler_latexmk = {'callback' : 0}
+
+" Global extra config
+let g:ycm_global_ycm_extra_conf = '$USER/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
